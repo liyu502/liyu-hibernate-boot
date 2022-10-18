@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>租借首頁</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="./rent.css" />
+    <link rel="stylesheet" href="./order.css" />
+     <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+  </head>
+  <body>
+    <!-- header -->
+
+    <div style="height: auto">
+      <div class="topnav">
+        <img
+          class="logoImg"
+          href="#home"
+          src="./img/Simple_Fitness-logos_white.png"
+          alt=""
+        />
+
+        <ul class="list-inline">
+          <li class="dropdown">
+            <a class="topnavBtn" id="home" href="#home">
+              <img class="icon" src="./img/home.png" alt="" title="首頁" />
+            </a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">最新消息</a></li>
+                <li><a href="#">場館資訊</a></li>
+                <li><a href="#">課程資訊</a></li>
+                <li><a href="#">收費方式</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="topnavBtn" id="cart" href="./cart.html">
+              <img
+                class="icon"
+                src="./img/cart.png"
+                alt=""
+                title="購物車"
+              /><span>0</span>
+            </a>
+          </li>
+          <li>
+            <a class="topnavBtn" id="notice" href="#notice">
+              <img class="icon" src="./img/bell.png" alt="" title="通知中心" />
+            </a>
+          </li>
+          <li class="dropdown">
+            <a class="topnavBtn" id="user" href="#user">
+              <img class="icon" src="./img/user.png" alt="" title="會員" />
+            </a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">登出</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- </div> -->
+      </div>
+      <!-- contentArea -->
+      <div class="contentArea">
+        <!-- aside -->
+        <div class="side-menu">
+          <ul class="nav">
+            <li>
+              <a href="#">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                會員資料編輯
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-gavel" aria-hidden="true"></i>
+                課程預約
+              </a>
+              <ul>
+                <li>
+                  <a href="#"> 我的預約 </a>
+                </li>
+                <li>
+                  <a href="#"> 預約團課/教練課 </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./rentFront.html" class="rent" style="background-color: #7bb593">
+                <i class="fa fa-coins" aria-hidden="true"></i>
+                租借用品
+              </a>
+              <ul>
+                <li>
+                  <a href="#"> 我的租借清單 </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- main -->
+        <main class="main">
+          <div class="container">
+            <table class="table table-hover">
+              <thead class="title">
+                <tr>
+                  <th>訂單編號</th>
+                  <th>租借場館</th>
+                  <th>訂單金額</th>
+                  <th>租借日期</th>
+                  <th>訂單狀態</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody class="orderList">
+                
+              </tbody>
+            </table>
+            
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModalCenter"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLongTitle">
+                      訂單明細
+                    </h4>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <table class="table">
+                      <thead class="title1">
+                        <tr>
+                          <th>商品名稱</th>
+                          <th>商品編號</th>
+                          <th>取貨時間</th>
+                          <th>歸還時間</th>
+                          <th>產品狀態</th>
+                        </tr>
+                      </thead>
+                      
+                      <tbody class="detailList">
+                       
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      確認
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <nav aria-label="Page navigation example" id="page-navigation">
+            </nav>
+            
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="./jquery-3.6.0.min.js"></script>
+<!--   	<script src="../../js/bootstrap.min.js"></script> -->
+	 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="./order.js"></script>
+  </body>
+</html>
